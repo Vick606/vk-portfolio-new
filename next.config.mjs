@@ -1,5 +1,7 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+// next.config.mjs
+import withCSS from '@zeit/next-css';
+
+const nextConfig = withCSS({
   images: {
     remotePatterns: [
       {
@@ -11,7 +13,7 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-  webpack(config, { isServer }) {
+  webpack(config) {
     config.module.rules.push({
       test: /\.css$/,
       use: [
@@ -26,16 +28,14 @@ const nextConfig = {
       ],
     });
 
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-        module: false,
-      };
-    }
+    config.resolve.fallback = {
+      ...config.resolve.fallback,
+      fs: false,
+      module: false,
+    };
 
     return config;
   },
-};
+});
 
 export default nextConfig;
