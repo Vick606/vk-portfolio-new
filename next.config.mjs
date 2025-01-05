@@ -1,7 +1,5 @@
-// next.config.mjs
-import withCSS from '@zeit/next-css';
-
-const nextConfig = withCSS({
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
     remotePatterns: [
       {
@@ -28,14 +26,8 @@ const nextConfig = withCSS({
       ],
     });
 
-    config.resolve.fallback = {
-      ...config.resolve.fallback,
-      fs: false,
-      module: false,
-    };
-
     return config;
   },
-});
+};
 
 export default nextConfig;
