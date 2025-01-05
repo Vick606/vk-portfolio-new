@@ -1,16 +1,16 @@
-import { motion } from "framer-motion";
+import { motion, Variants } from "framer-motion";
 
-const cursorVariants = {
+const cursorVariants: Variants = {
   blinking: {
     opacity: [0, 1],
     scale: [1, 1.1],
     transition: {
       duration: 0.8,
       repeat: Infinity,
-      repeatType: "reverse",
-      ease: "easeInOut",
-    },
-  },
+      repeatType: "reverse" as const,
+      ease: "easeInOut"
+    }
+  }
 };
 
 export default function CursorBlinker() {
