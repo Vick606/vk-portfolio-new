@@ -1,13 +1,6 @@
 import React from 'react';
-
-import campwithusImg from '@/../public/images/camp-with-us.png';
-import carcatalogImg from '@/../public/images/car-catalog.png';
-import hirredImg from '@/../public/images/Hirred.png';
-import projectmanagementImg from '@/../public/images/project-management.png';
-import reactfoodImg from '@/../public/images/react-food.png';
-import surgeImg from '@/../public/images/surge.png';
 import portfolioImg from '@/../public/images/portfolio.png';
-import railscoutImg from '@/../public/images/RailScout.png';
+// Import your project images here
 import {
   BookIcon,
   BriefcaseBusinessIcon,
@@ -15,136 +8,60 @@ import {
 } from 'lucide-react';
 
 export const links = [
-  {
-    name: 'Home',
-    id: 'home',
-  },
-  {
-    name: 'About',
-    id: 'about',
-  },
-  {
-    name: 'Projects',
-    id: 'projects',
-  },
-  {
-    name: 'Experience',
-    id: 'experience',
-  },
-  {
-    name: 'Skills',
-    id: 'skills',
-  },
-  {
-    name: 'Contact',
-    id: 'contact',
-  },
+  { name: 'Home', id: 'home' },
+  { name: 'About', id: 'about' },
+  { name: 'Projects', id: 'projects' },
+  { name: 'Experience', id: 'experience' },
+  { name: 'Skills', id: 'skills' },
+  { name: 'Contact', id: 'contact' },
 ] as const;
 
 export const experiencesData = [
   {
-    title: 'React Intern',
-    location: 'Jabalpur',
-    description: `Developed a React.js-based front-end for a user feedback portal that improved customer data collection, reducing data processing time by 25%.`,
+    title: 'Software Developer',
+    location: 'Nairobi, Kenya',
+    description: 'Full-stack developer specializing in React and Node.js applications. Led development of multiple web applications improving user engagement by 40%.',
     icon: React.createElement(BriefcaseBusinessIcon),
-   
-    date: 'Dec 2023 - Feb 2024',
+    date: '2022 - Present',
   },
   {
-    title: 'Jabalpur Engineering College',
-    location: 'Jabalpur,M.P',
-    description: `Bachelor's degree in Computer Science and Engineering. Studying on the faculty of Computer Scienceand Software Engineering. `,
-   icon: React.createElement(BookIcon),
-    date: 'Jun 2021 - Present',
+    title: 'Technical Consultant',
+    location: 'Remote',
+    description: 'Provided technical consulting services for web development projects, specializing in modern JavaScript frameworks and cloud solutions.',
+    icon: React.createElement(LaptopMinimalIcon),
+    date: '2020 - 2022',
   },
-  
   {
-    title: 'Kendriya Vidhyalaya C.M.M',
-    location: 'Jabalpur',
-    description: `Completed My High School with Subjects : Math,Biology,Chemistry,Physics,English.`,
+    title: 'Computer Science Degree',
+    location: 'University Name',
+    description: 'Bachelors degree in Computer Science with focus on software engineering and web technologies.',
     icon: React.createElement(BookIcon),
-    date: 'June 2020',
-
+    date: '2016 - 2020',
   },
 ] as const;
 
-export const images = {
-  campwithusImg,
-  carcatalogImg,
-  hirredImg,
-  projectmanagementImg,
-  reactfoodImg,
-};
-
 export const projectsData = [
   {
-    title: 'Hirred',
-    description:
-      'A platform for Recuriter to Hire and Candidates gets Hired with robust user management.',
-    tags: [
-      'React',
-      'Supabase',
-      'Axios',
-      'Clerk',
-      'Shadcn',
-      'Tailwind',
-    ],
-    imageUrl: hirredImg,
-    link: 'https://hirred1.vercel.app/',
+    title: 'E-Commerce Platform',
+    description: 'A full-stack e-commerce platform with real-time inventory management and secure payment processing.',
+    tags: ['React', 'Node.js', 'MongoDB', 'Express', 'Stripe', 'Redux'],
+    imageUrl: portfolioImg, // Replace with your project image
+    link: 'https://github.com/YourUsername/project1',
   },
   {
-    title: 'Portfolio',
-    description: `Portfolio that you're currently viewing! This project showcases my work and provides information about me.`,
-    tags: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'Framer Motion',
-      'Cloudinary',
-      'React Email',
-      'Tailwind',
-    ],
+    title: 'Task Management System',
+    description: 'Enterprise task management system with real-time updates and team collaboration features.',
+    tags: ['Next.js', 'TypeScript', 'PostgreSQL', 'Prisma', 'Tailwind'],
+    imageUrl: portfolioImg, // Replace with your project image
+    link: 'https://github.com/YourUsername/project2',
+  },
+  {
+    title: 'Personal Portfolio',
+    description: 'Modern portfolio website built with Next.js and TypeScript, featuring responsive design and animations.',
+    tags: ['React', 'Next.js', 'TypeScript', 'Tailwind', 'Framer Motion'],
     imageUrl: portfolioImg,
-    link: 'https://github.com/bbyc4kes/portfolio',
+    link: 'https://github.com/YourUsername/portfolio',
   },
-  {
-    title: 'RailScout',
-    description: `RailScout is a railway pathfinder app that uses React, Three.js, and Geolocation API to visually map routes between station destinations.`,
-    tags: [
-      'React',
-      'TypeScript',
-      'Three.js',
-      'Geolocation',
-      'SCRUM Methodology',
-      'End-to-End Development',
-    ],
-    imageUrl: railscoutImg ,
-    link: 'https://rail-scouts-omega.vercel.app/',
-  },
-  // {
-  //   title: 'Project Pending',
-  //   description:
-  //     '',
-  //   tags: [
-  //     'React',
-  //     'TypeScript',
-  //     'Next.js',
-  //     'MySQL',
-  //     'Clerk',
-  //     'Stripe Connect',
-  //     'Shadcn',
-  //     'Tailwind',
-  //   ],
-  //   imageUrl: ,
-  //   link: '',
-  // },
-  // {
-  //   title: 'Projet Pending ',
-  //   description:
-  //     ',
-  //   imageUrl: ,
-  //   link: '',
-  // },
 ] as const;
 
 export const skillsData = [
@@ -153,26 +70,15 @@ export const skillsData = [
   ['React', '/svgs/react.svg'],
   ['Next.js', '/svgs/nextjs.svg'],
   ['Node.js', '/svgs/node-js.svg'],
-  ['Express', '/svgs/express-original.svg'],
-  ['Tailwind', '/svgs/tailwind-css.svg'],
-  ['Framer', '/svgs/framer.svg'],
-  ['Shadcn', '/svgs/shadcnui.svg'],
-  ['Headless', '/svgs/brand-headlessui.svg'],
-  ['Redux', '/svgs/redux-original.svg'],
-  ['Prisma', '/svgs/file-type-light-prisma.svg'],
-  ['MongoDB', '/svgs/mongodb-original.svg'],
+  ['Python', '/svgs/python.svg'],
+  ['Django', '/svgs/django.svg'],
   ['PostgreSQL', '/svgs/postgresql.svg'],
-  ['MySQL', '/svgs/MySQL.svg'],
-  ['Tanstack Query', '/svgs/react-query-seeklogo.svg'],
-  ['Tanstack Table', '/svgs/db-table-svgrepo-com.svg'],
-  ['Cloudinary', '/svgs/cloudinary.svg'],
+  ['MongoDB', '/svgs/mongodb-original.svg'],
   ['Docker', '/svgs/Docker.svg'],
-  ['Clerk', '/svgs/clerk.svg'],
-  ['Axios', '/svgs/axios.svg'],
-  ['HTML', '/svgs/file-type-html.svg'],
-  ['CSS', '/svgs/file-type-css.svg'],
-  ['Sass', '/svgs/Sass.svg'],
+  ['AWS', '/svgs/aws.svg'],
   ['Git', '/svgs/git.svg'],
   ['GitHub', '/svgs/github.svg'],
-  ['', '/svgs/etc.svg'],
+  ['HTML', '/svgs/file-type-html.svg'],
+  ['CSS', '/svgs/file-type-css.svg'],
+  ['Tailwind', '/svgs/tailwind-css.svg'],
 ] as const;
