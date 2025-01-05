@@ -1,111 +1,100 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer base {
-  :root {
-    /* Data-focused color palette */
-    --background: 220 33% 98%;
-    --foreground: 222 47% 11%;
-    
-    /* Primary colors for data viz */
-    --primary: 222 47% 11%;
-    --primary-foreground: 220 33% 98%;
-    
-    /* Analytics-inspired accent colors */
-    --accent: 217 91% 60%;
-    --accent-foreground: 221 39% 11%;
-    
-    /* Visualization palette */
-    --data-blue: 217 91% 60%;
-    --data-purple: 271 91% 65%;
-    --data-cyan: 199 89% 48%;
-    --data-green: 142 71% 45%;
-    
-    /* UI Elements */
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --secondary: 218 27% 94%;
-    --secondary-foreground: 222 47% 11%;
-    --muted: 218 27% 94%;
-    --muted-foreground: 215 25% 27%;
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 222 47% 11%;
-    --radius: 0.75rem;
-  }
-
-  .dark {
-    --background: 222 47% 11%;
-    --foreground: 210 40% 98%;
-    
-    /* Dark mode adaptations */
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
-    --secondary: 217 19% 27%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 19% 27%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 217 91% 60%;
-    --accent-foreground: 210 40% 98%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 19% 27%;
-    --input: 217 19% 27%;
-    --ring: 216 34% 17%;
-  }
+/* Base styles */
+:root {
+  /* Data-focused color palette */
+  --background: 220 33% 98%;
+  --foreground: 222 47% 11%;
+  
+  /* Primary colors */
+  --primary: 222 47% 11%;
+  --primary-foreground: 220 33% 98%;
+  
+  /* Data visualization colors */
+  --data-blue: 217 91% 60%;
+  --data-purple: 271 91% 65%;
+  --data-cyan: 199 89% 48%;
+  --data-green: 142 71% 45%;
+  
+  /* UI Elements */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+  --border: 214 32% 91%;
+  --radius: 0.75rem;
 }
 
-/* Modern Typography */
-@layer base {
-  html {
-    font-family: 'Inter', system-ui, sans-serif;
-    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-    -webkit-font-smoothing: antialiased;
-    font-size: 16px;
-  }
-
-  h1, h2, h3, h4, h5, h6 {
-    @apply font-display tracking-tight;
-  }
+.dark {
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+  --card: 222 47% 11%;
+  --card-foreground: 210 40% 98%;
+  --border: 217 19% 27%;
 }
 
-/* Data Visualization Utilities */
-@layer utilities {
+/* Typography */
+html {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  font-size: 16px;
+}
+
+/* Data visualization styles */
+.data-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 640px) {
   .data-grid {
-    @apply grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3;
-  }
-
-  .chart-container {
-    @apply rounded-lg border bg-card p-4 shadow-sm;
-  }
-
-  .data-card {
-    @apply rounded-xl border bg-card p-6 shadow-lg transition-all hover:shadow-xl;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* Custom Animations */
-@layer utilities {
-  .animate-float {
-    animation: float 6s ease-in-out infinite;
+@media (min-width: 1024px) {
+  .data-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
+}
 
-  @keyframes float {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
-  }
+.chart-container {
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  padding: 1rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
 
-  .gradient-text {
-    @apply bg-gradient-to-r from-data-blue to-data-purple bg-clip-text text-transparent;
-  }
+.data-card {
+  border-radius: var(--radius);
+  border: 1px solid hsl(var(--border));
+  background: hsl(var(--card));
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.data-card:hover {
+  box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+}
+
+/* Animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+.gradient-text {
+  background: linear-gradient(
+    to right,
+    hsl(var(--data-blue)),
+    hsl(var(--data-purple))
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
