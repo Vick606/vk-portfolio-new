@@ -11,6 +11,31 @@ const nextConfig = {
   compiler: {
     styledComponents: true,
   },
-}
+  webpack(config, { isServer }) {
+    config.module.rules.push({
+      test: /\.css$/,
+      use: [
+        'style-loader',
+        {
+          loader: 'css-loader',
+          options: {
+            importLoaders: 1,
+          },
+        },
+        'postcss-loader',
+      ],
+    });
 
-export default nextConfig
+    if (!isServer) {
+      config.resolve.fallback = {
+        ...config.resolve.fallback,
+        fs: false,
+        module: false,
+      };
+    }
+
+    return config;
+  },
+};
+
+export default nextConfig;
