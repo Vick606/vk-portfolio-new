@@ -8,6 +8,8 @@ import { ThemeProvider } from '@/common/theme/theme-provider';
 import Header from '@/common/components/shared/header';
 import Footer from '@/common/components/shared/footer';
 import { ModeToggle } from '@/common/theme/mode-toggler';
+import "@/styles/font-styles.css";
+
 
 export const metadata: Metadata = {
   title: 'Nimit Kumar Soni | Portfolio',
