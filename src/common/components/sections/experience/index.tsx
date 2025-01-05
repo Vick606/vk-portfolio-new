@@ -10,7 +10,11 @@ import { useTheme } from 'next-themes';
 import { useHasMounted, useSectionInView } from '@/common/lib/hooks';
 import SectionHeading from '@/common/components/shared/section-heading';
 import SectionDivider from '@/common/components/shared/section-divider';
-import { BriefcaseIcon, AcademicCapIcon, TrophyIcon } from 'lucide-react';
+import { 
+  Briefcase, 
+  GraduationCap, 
+  Trophy 
+} from 'lucide-react';
 
 const experienceData = [
   {
@@ -18,7 +22,7 @@ const experienceData = [
     location: "Tech Company, Nairobi",
     description: "Led data analysis projects using Python and ML frameworks. Developed predictive models improving business efficiency by 30%.",
     date: "2022 - Present",
-    icon: <BriefcaseIcon />,
+    icon: <Briefcase />,
     category: "work"
   },
   {
@@ -26,7 +30,7 @@ const experienceData = [
     location: "AI Startup, Remote",
     description: "Implemented ML solutions using TensorFlow and PyTorch. Created scalable data pipelines and automated reporting systems.",
     date: "2020 - 2022",
-    icon: <BriefcaseIcon />,
+    icon: <Briefcase />,
     category: "work"
   },
   {
@@ -34,7 +38,7 @@ const experienceData = [
     location: "University Name",
     description: "Specialized in machine learning and statistical analysis. Completed thesis on predictive modeling in financial markets.",
     date: "2018 - 2020",
-    icon: <AcademicCapIcon />,
+    icon: <GraduationCap />,
     category: "education"
   },
   {
@@ -42,7 +46,7 @@ const experienceData = [
     location: "University Name",
     description: "Focus on algorithms, data structures, and software engineering principles.",
     date: "2014 - 2018",
-    icon: <AcademicCapIcon />,
+    icon: <GraduationCap />,
     category: "education"
   },
   {
@@ -50,7 +54,7 @@ const experienceData = [
     location: "Industry Recognition",
     description: "Recognized for innovative ML solutions in business analytics.",
     date: "2022",
-    icon: <TrophyIcon />,
+    icon: <Trophy />,
     category: "achievement"
   }
 ];
