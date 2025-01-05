@@ -5,7 +5,7 @@
 ![Framer Motion](https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
 
 
-### Welcome to my portfolio project! This project showcases my skills and experience in web development using modern technologies like Next.js, Tailwind CSS, Framer Motion, and more. 
+### My portfolio project in progress!
 
 ## Features
 
@@ -63,18 +63,3 @@ This project includes several components and utilities that you can use and modi
 - `app/`: Contains the Next.js app.
 - `public/`: Contains public assets such as images and videos.
 - `lib/`: Contains utility/data.
-
-## Contributing
-
-Feel free to fork this repository and submit pull requests. Any contributions, whether it be improvements, bug fixes, or new features, are greatly appreciated!
-Please make sure to read and follow our [Code of Conduct](CODE_OF_CONDUCT.md) and the [Contribution Guidelines](CONTRIBUTE.md) before contributing.
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-If you want to get in touch, you can reach me at [Nimit Kumar Soni](mailto:nimitsonijobid@gmail.com).
-
-Thank you for checking out my portfolio project!
