@@ -7,7 +7,7 @@ import { useSectionInView } from "@/common/lib/hooks";
 import { useActiveSectionContext } from "@/common/stores/active-section";
 import { smoothScrollTo } from "@/common/lib/utils";
 import { motion } from "framer-motion";
-import { Linkedin } from "lucide-react";
+import { Linkedin, Github } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -21,11 +21,7 @@ export default function Hero() {
         id="home"
         ref={ref}
       >
-        <div
-          className={
-            "absolute left-0 top-0 h-screen w-full dark:bg-[#0000007c]"
-          }
-        ></div>
+        <div className="absolute left-0 top-0 h-screen w-full dark:bg-[#0000007c]"></div>
         <video
           width="480"
           height="720"
@@ -46,10 +42,10 @@ export default function Hero() {
                 animate={{ y: 0, x: "-50%", opacity: 1 }}
                 className="mb-10 text-start font-extrabold"
               >
-                Hey!
+                Welcome!
               </motion.span>
               <br />
-              <TextAnimation delay={1} baseText={`I'm Nimit`} />
+              <TextAnimation delay={1} baseText={`I'm Victor Koech`} />
             </div>
             <motion.div
               className="w-92 flex flex-col items-center justify-center gap-3 px-4 text-sm font-medium md:mt-12 md:flex-row lg:text-lg"
@@ -67,36 +63,31 @@ export default function Hero() {
                   setTimeOfLastClick(Date.now());
                 }}
               >
-                <span>Contact me here</span>
+                <span>Get in Touch</span>
               </a>
 
               <a
                 className="borderBlack group flex w-64 cursor-pointer items-center justify-center gap-2 rounded-full bg-white px-7 py-3 text-black outline-none transition hover:bg-gray-100 dark:bg-white/10 dark:text-white dark:hover:bg-white/20 sm:w-auto"
-                href="/Nimit_CV.pdf"
+                href="/Victor_Koech_CV.pdf"
                 download
               >
-                <span>Download CV</span>
+                <span>Download Resume</span>
               </a>
 
               <div className="flex gap-2">
                 <a
                   className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-black transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                  href="https://www.linkedin.com/in/nimit-kumar-soni-05351322b/"
+                  href="https://www.linkedin.com/in/victor-koech/"
                   target="_blank"
                 >
                   <Linkedin />
                 </a>
                 <a
                   className="borderBlack flex h-[50px] w-[50px] cursor-pointer items-center justify-center gap-2 rounded-full bg-white p-2 text-gray-700 transition hover:bg-gray-100 hover:text-gray-950 dark:bg-white/10 dark:text-white/60 dark:hover:bg-white/20"
-                  href="https://github.com/NIMIT001"
+                  href="https://github.com/Vick606"
                   target="_blank"
                 >
-                  <Image
-                    width={25}
-                    height={25}
-                    src={"/svgs/github.svg"}
-                    alt="github icon"
-                  />
+                  <Github />
                 </a>
               </div>
             </motion.div>
