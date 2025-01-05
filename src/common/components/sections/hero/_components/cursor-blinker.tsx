@@ -2,13 +2,13 @@ import { motion } from "framer-motion";
 
 const cursorVariants = {
   blinking: {
-    opacity: [0, 0, 1, 1],
+    opacity: [0, 1],
+    scale: [1, 1.1],
     transition: {
-      duration: 1,
+      duration: 0.8,
       repeat: Infinity,
-      repeatDelay: 0,
-      ease: "linear",
-      times: [0, 0.5, 0.5, 1],
+      repeatType: "reverse",
+      ease: "easeInOut",
     },
   },
 };
@@ -18,7 +18,20 @@ export default function CursorBlinker() {
     <motion.div
       variants={cursorVariants}
       animate="blinking"
-      className={`inline-block h-8 w-[2px] translate-y-2 rounded-md bg-slate-800`}
+      className={`
+        inline-block 
+        h-8 
+        w-[3px] 
+        translate-y-1 
+        rounded-full 
+        bg-gradient-to-b 
+        from-blue-500 
+        to-purple-500 
+        dark:from-blue-400 
+        dark:to-purple-400
+        md:h-10
+        lg:h-12
+      `}
     />
   );
 }
