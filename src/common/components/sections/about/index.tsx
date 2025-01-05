@@ -44,20 +44,19 @@ export default function About() {
             <div className="text-md relative z-40 flex flex-col gap-3 font-semibold tracking-wide text-primary lg:absolute lg:right-0 lg:top-[27%] lg:block lg:max-w-[580px] lg:text-start lg:text-lg xl:top-1/3 xl:h-[442px] xl:max-w-[650px]">
               <div className="flex h-full flex-col justify-center gap-6">
                 <span>
-                  
-                  I&apos;m a Full-stack developer skilled in TypeScript,
-                   React, Next.js, Node.js, and database technologies 
-                   like MongoDB, PostgreSQL, and MySQL, with Prisma for 
-                   seamless data management. I excel at creating user-focused
-                    web applications, emphasizing intuitive design and engaging user interactions.
+                  As a Data Analyst and Machine Learning expert, I combine analytical precision 
+                  with practical problem-solving. My expertise spans Python-based data analysis, 
+                  predictive modeling, and full-stack development, allowing me to create 
+                  end-to-end solutions that transform data into actionable insights.
                 </span>
                 <span>
-                  Seeking for Web Development opportunities where I can leverage
-                  my skills to create meaningful connections between products
-                  and users.
+                  With a strong foundation in statistical analysis and modern web technologies, 
+                  I bridge the gap between complex data processing and user-friendly applications. 
+                  I'm passionate about leveraging ML and AI to solve real-world challenges while 
+                  maintaining clean, efficient code practices.
                 </span>
                 <p className="flex flex-col items-start sm:items-center lg:items-start">
-                  <span>So if you are interested,</span>
+                  <span>Interested in collaboration?</span>
                   <Link
                     href={"contact"}
                     onClick={(e) => {
@@ -65,8 +64,8 @@ export default function About() {
                     }}
                     className="w-52 lg:w-40"
                   >
-                    <span className="bg-[#ffcbb4] text-2xl font-bold uppercase dark:bg-[#ddbea9] lg:normal-case">
-                      Contact me!
+                    <span className="bg-gradient-to-r from-blue-500/20 to-purple-500/20 px-4 py-2 text-2xl font-bold uppercase transition-colors hover:from-blue-500/30 hover:to-purple-500/30 dark:from-blue-400/20 dark:to-purple-400/20">
+                      Let's Connect
                     </span>
                   </Link>
                 </p>
@@ -74,15 +73,16 @@ export default function About() {
             </div>
             <div className="absolute z-30 hidden lg:left-0 lg:top-1/4 lg:block">
               <div className="relative h-72 w-72 lg:h-[380px] lg:w-[380px] xl:h-[470px] xl:w-[470px]">
-                <div className="absolute inset-0 z-20 rounded-full bg-gradient-to-b from-[#ffcbb4] via-[#e0afa0] to-[#e29578] transition-opacity group-hover:opacity-60"></div>
+                <div className="absolute inset-0 z-20 rounded-full bg-gradient-to-b from-blue-500/20 via-purple-500/20 to-indigo-500/20 transition-opacity group-hover:opacity-80"></div>
                 <div className="absolute inset-0">
                   <Image
                     src={portfolioImg}
-                    alt="portfolio image"
+                    alt="Victor Koech profile"
                     placeholder="blur"
                     width={470}
                     height={470}
-                    className="z-10 rounded-full lg:h-[380px] lg:w-[380px] xl:h-[470px] xl:w-[470px]"
+                    className="z-10 rounded-full object-cover lg:h-[380px] lg:w-[380px] xl:h-[470px] xl:w-[470px]"
+                    priority
                   />
                 </div>
               </div>
