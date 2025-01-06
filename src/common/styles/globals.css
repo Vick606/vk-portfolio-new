@@ -1,40 +1,55 @@
-/* Base styles */
-:root {
-  /* Data-focused color palette */
-  --background: 220 33% 98%;
-  --foreground: 222 47% 11%;
-  
-  /* Primary colors */
-  --primary: 222 47% 11%;
-  --primary-foreground: 220 33% 98%;
-  
-  /* Data visualization colors */
-  --data-blue: 217 91% 60%;
-  --data-purple: 271 91% 65%;
-  --data-cyan: 199 89% 48%;
-  --data-green: 142 71% 45%;
-  
-  /* UI Elements */
-  --card: 0 0% 100%;
-  --card-foreground: 222 47% 11%;
-  --border: 214 32% 91%;
-  --radius: 0.75rem;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-.dark {
-  --background: 222 47% 11%;
-  --foreground: 210 40% 98%;
-  --card: 222 47% 11%;
-  --card-foreground: 210 40% 98%;
-  --border: 217 19% 27%;
-}
+@layer base {
+  :root {
+    /* Data-focused color palette */
+    --background: 220 33% 98%;
+    --foreground: 222 47% 11%;
+    
+    /* Primary colors */
+    --primary: 222 47% 11%;
+    --primary-foreground: 220 33% 98%;
+    
+    /* Data visualization colors */
+    --data-blue: 217 91% 60%;
+    --data-purple: 271 91% 65%;
+    --data-cyan: 199 89% 48%;
+    --data-green: 142 71% 45%;
+    
+    /* UI Elements */
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+    --border: 214 32% 91%;
+    --radius: 0.75rem;
+  }
 
-/* Typography */
-html {
-  font-family: 'Inter', system-ui, sans-serif;
-  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
-  -webkit-font-smoothing: antialiased;
-  font-size: 16px;
+  .dark {
+    --background: 222 47% 11%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 11%;
+    --card-foreground: 210 40% 98%;
+    --border: 217 19% 27%;
+  }
+
+  /* Typography */
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    -webkit-font-smoothing: antialiased;
+    font-size: 16px;
+  }
+
+  /* Apply border color globally */
+  * {
+    @apply border-border;
+  }
+
+  /* Apply global background and text color */
+  body {
+    @apply bg-background text-foreground;
+  }
 }
 
 /* Data visualization styles */
