@@ -8,13 +8,12 @@ import { ThemeProvider } from '@/common/theme/theme-provider';
 import Header from '@/common/components/shared/header';
 import Footer from '@/common/components/shared/footer';
 import { ModeToggle } from '@/common/theme/mode-toggler';
-import "@/styles/font-styles.css";
-
+import "@/styles/font-styles.css"; // Ensure this import path is correct
 
 export const metadata: Metadata = {
   title: 'Nimit Kumar Soni | Portfolio',
   description:
-    'Check out modern and stylish porfolio of an experienced Web Developer Nimit! Built using TypeScript, Next.js 14, Framaer Motion and Tailwind CSS.',
+    'Check out modern and stylish portfolio of an experienced Web Developer Nimit! Built using TypeScript, Next.js 14, Framer Motion and Tailwind CSS.',
 };
 
 const fontMontserrat = FontMontserrat({
